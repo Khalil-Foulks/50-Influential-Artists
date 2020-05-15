@@ -226,9 +226,10 @@ console.log(artists[8].name);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
+    let person = artists[id];
+    return "The artist at index " + person.id + " is " + person.name;
   }
-  
+  console.log(getArtistByIndex(0,'Amedeo Modigliani'));
   /**
 
 
