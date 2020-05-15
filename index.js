@@ -225,11 +225,11 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
+function getArtistByIndex(id, artists) {
     let person = artists[id];
     return "The artist at index " + person.id + " is " + person.name;
   }
-  console.log(getArtistByIndex(0,'Amedeo Modigliani'));
+  console.log(getArtistByIndex(0, artists));
   /**
 
 
@@ -241,10 +241,11 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists, id) {
+    artists.splice(id,id+1);
+    return artists;
   }
-  
+  console.log(removeArtist(artists, 0));
   /**
 
 
