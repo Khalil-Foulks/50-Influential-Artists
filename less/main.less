@@ -1,17 +1,31 @@
+
+
 body{
+    .flexBox(column, center, center);
+    width: 80%;
+    margin: 0 auto;
+
+    @media @mobile {
+        width: 95%;
+    }
+
     .title-container{
-        //display: flex;
-        justify-content: center;
         margin: 0 0 1% 0;
         .img-container{
             width: 70%;
-
             text-align: center;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            
+            @media @mobile {
+                width: 100%;
+                }
 
             img{
+                @media @mobile {
+                width: 100%;
+                }
             }
         }
 
@@ -22,15 +36,83 @@ body{
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-40%, -130%);
+            transform: translate(-50%, -230%);
             text-align: center;
+            @media @mobile {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, -250%);
+            }
 
             h1{
-                color: white
+                color: white;
+                @media @mobile {
+                    font-size: 3.5rem;
+                    margin: 0;
+                    width: 100%;
+                }
             }
             .btn{
                 .button(white);
+
+                @media @mobile {
+                    .button(white, .5rem 1rem);
+                }
             }
         }
+    }
+    .artists-container {
+        display: flex;
+        width: 95%;
+        margin: 2.5% auto;
+    
+        @media @mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+            .artist {
+                width: 50%;
+                .flexBox(column, default, center);
+    
+                @media @mobile {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            
+                img {
+                    width: 60%;
+                    height: 50%;
+                    border-radius: 10px;
+    
+                    @media @mobile{
+                        width: 40%;
+                    }
+    
+                }
+    
+                 a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 2rem;
+                    padding: 2%;
+    
+                    @media @mobile {
+                        text-align: center;
+                        font-size: 2.5rem;
+                    }
+                }
+    
+                .bio {
+                    width: 90%;
+                    font-size: 1.2rem;
+    
+                    @media @mobile {
+                        text-align: center;
+                    }
+                }
+            }
     }
 }
