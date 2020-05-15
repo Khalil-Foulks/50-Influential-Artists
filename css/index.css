@@ -148,8 +148,44 @@ header nav .about {
   border-left: 2px solid grey;
   border-right: 2px solid grey;
 }
-body .title-container .img-container {
-  width: 50%;
-  display: flex;
+body .title-container {
   justify-content: center;
+  margin: 0 0 1% 0;
+}
+body .title-container .img-container {
+  width: 70%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .title-container hr {
+  margin: 2% 0;
+}
+body .title-container .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -130%);
+  text-align: center;
+}
+body .title-container .centered h1 {
+  color: white;
+}
+body .title-container .centered .btn button {
+  background-color: white;
+  border-color: none;
+  text-decoration: none;
+  color: black;
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+}
+body .title-container .centered .btn button:hover {
+  background-color: #ffffff;
+}
+@media ( max-width: 500px )  {
+  body .title-container .centered .btn button {
+    padding: 1rem 3rem;
+  }
 }
