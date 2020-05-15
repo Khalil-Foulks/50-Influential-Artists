@@ -1,0 +1,22 @@
+.button(@bg-color,@padding:1rem 3rem,@font-size:1.6rem){
+    button{
+        background-color: @bg-color;
+        border-color: none;
+        text-decoration: none;
+        color: black;
+        border-radius: .5rem;
+        padding: 1rem 3rem;
+        font-size: @font-size;
+
+        @media @mobile {
+            padding: @padding;
+        }
+    }
+}
+
+.flexBox(@direction, @justify, @alignItems) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @alignItems;
+}
