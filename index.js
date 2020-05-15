@@ -251,11 +251,16 @@ function removeArtist(artists, id) {
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(artists){
+    let paintings = []
+    for (let i =0; i< artists.length; i++)
+      if (artists[i].paintings>100){
+        paintings.push(artists[i].name);
+      }
+      return paintings;
   }
+
+  console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -267,12 +272,24 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(artists, id, name, years, genre, nationality, bio){
+    const artistUpdate = {
+      id: id,
+      name:name,
+      genre:genre,
+      nationality:nationality,
+      bio:bio
+    }
+    //console.log(artistUpdate);
+    
+    let artistsNew = artists;
+    artistsNew.push(artistUpdate);
+    console.log(artistsNew);
 
-    /* Code here */
 
   }
 
+  console.log(addArtist(artists,21,'Khalil Foulks', 11 - 26,'Web Design', 'American','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'))
 
 
 
